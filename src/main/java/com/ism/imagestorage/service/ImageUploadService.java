@@ -1,4 +1,4 @@
-package com.ism.image_storage_service.service;
+package com.ism.imagestorage.service;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
@@ -17,6 +17,6 @@ public class ImageUploadService {
 
     public String uploadImage(MultipartFile file) throws IOException {
         Map uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
-        return uploadResult.get("secure_url").toString(); // URL sécurisée
+        return uploadResult.get("secure_url").toString();
     }
 }
