@@ -22,4 +22,10 @@ public class ImageUploadController {
             return ResponseEntity.badRequest().body("Upload failed: " + e.getMessage());
         }
     }
+
+    // Endpoint test simple pour vérifier que le microservice fonctionne
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("Microservice image OK");
+    }
 }
